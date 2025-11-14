@@ -35,4 +35,7 @@ const likeSchema = new Schema({
         type:Date,
         required:true
     }
-})
+},
+{timestamps:true})
+
+export const like =mongoose.model("like",likeSchema);

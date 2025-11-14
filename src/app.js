@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import healthChecRouter from "./routes/healthCheck.routes.js";
 import userRouter from "./routes/user.routes.js";
+import videoRouter from "./routes/video.routes.js"
+import tweetRouter from "./routes/tweet.routes.js"
 import cookieParser from "cookie-parser";
 import { errorHandler } from "./middelwares/error.middleware.js";
 
@@ -32,6 +34,6 @@ console.log("healthcheck : /api/v1/healthcheck/test");
 // ✅ File upload routes (multer handles form-data)
 app.use("/api/v1/user", userRouter);
 app.use("api/v1/videos",videoRouter);
-
+app.use("api/v1/tweet",tweetRouter);
 // app.use(errorHandler);
 export { app };

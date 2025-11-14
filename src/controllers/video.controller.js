@@ -32,7 +32,7 @@ const getAllVideos = asyncHandler(async (req, res) => {
     }
     const videos =await Video.find(query)
     .sort(sortCriteria)
-    .skip(page*limit)
+    .skip((page-1)*limit)
     .limit(limit)
 
     if(!videos){

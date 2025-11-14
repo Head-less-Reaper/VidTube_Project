@@ -11,18 +11,11 @@ import mongoose, { Schema } from "mongoose";
 const tweetSchema = new Schema({
     owner:{
         type:Schema.Types.ObjectId,
-        ref:"User"
+        ref:"User",
+        required:true
     },
     content:{
         type:String,
-        required:true
-    },
-    createdAt:{
-        type:Date,
-        required:true
-    },
-    updatedAt:{
-        type:Date,
         required:true
     }
 }
